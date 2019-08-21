@@ -1,0 +1,28 @@
+.pagination {
+  display: flex;
+  list-style-type: none;
+  padding-left: 0;
+  li {
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    &:first-child, &:last-child {
+      background-color: #ecf0f3;
+      color: #7d8189;
+      margin: 3px;
+      width: 30px;
+      height: 30px;
+    }
+    a {
+      &:focus {
+        outline: none;
+      }
+    }
+    &.active {
+      background-color: #3fbd95;
+    }
+  }
+}

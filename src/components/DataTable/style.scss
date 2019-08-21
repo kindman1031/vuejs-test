@@ -1,0 +1,45 @@
+.data-table {
+  .container {
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px; 
+    .filter-container {
+      display: flex;
+      align-items: center;
+      > div {
+        margin-right: 10px;
+      }
+    }
+    .table {
+      color: #555;
+      .body {
+        display: flex;
+        flex-direction: column;
+      }
+      .row {
+        display: flex;
+        border-bottom: 1px solid #ccc;
+        padding: 15px 0;
+        .column {
+          flex: 1;
+          &:nth-child(3) {
+            flex: 2
+          }
+        }
+        .control {
+          display: flex;
+          justify-content: flex-end;
+        }
+      }
+    }
+  }
+  .pagination-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .pagination-info {
+      color: #555;
+      font-size: 14px;
+    }
+  }
+}

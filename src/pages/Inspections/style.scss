@@ -1,0 +1,48 @@
+.inspections {
+  padding: 0 40px;
+  .header {
+    display: flex;
+    height: 100px;
+    align-items: center;
+    justify-content: space-between;
+    .title {
+      color: #4f4f51;
+      font-size: 24px;
+    }
+    .control {
+      display: flex;  
+      align-items: center;  
+      button {
+        border: none;
+        border-radius: 4px;
+        background-color: #3fbd95;
+        padding: 5px 10px;
+        color: #fff;
+        font-size: 16px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        &:focus {
+          outline: none;
+        }
+        span {
+          margin-left: 10px;
+        }
+      } 
+      .divider {
+        background-color: #c3c2c2;
+        width: 1px;
+        height: 50px;
+        margin: 0 20px;
+      }
+      .notification {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        svg:last-child {
+          margin-left: -8px;
+        }
+      }
+    }
+  }
+}

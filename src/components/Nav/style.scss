@@ -1,0 +1,25 @@
+.app-nav {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  .logo {
+    padding: 35px 25px;
+    height: 30px;
+    img {
+      width: 200px;
+    }
+  }
+  
+  .items-container {
+    flex: 1;
+    background-color: #4a5460;
+    position: relative;
+    padding-top: 20px;
+    
+    .user {
+      position: absolute;
+      bottom: 0;
+    }
+  }
+}

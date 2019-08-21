@@ -1,0 +1,9 @@
+.v-select {
+  .vs__dropdown-toggle {
+    min-width: 200px;
+  }
+  .vs__selected, .vs__dropdown-option {
+    color: #555 !important;
+    font-size: 14px;
+  }
+}
