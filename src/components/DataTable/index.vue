@@ -17,7 +17,7 @@
         <div class="body" v-if="!tableData.isFetching">
           <div v-for="item in tableData.data.data" :key="item.id" class="row">
             <div class="column">
-              {{ item.startAt }}
+              {{ new Date(item.startAt).toLocaleString() }}
             </div>
             <div class="column">
               {{ `${item.calendarEventsUsers[0].user.firstName} ${item.calendarEventsUsers[0].user.lastName}` }}
@@ -49,8 +49,8 @@
     </div>
     <div class="pagination-container" v-if="!tableData.isFetching">
       <paginate
-        :page-count="tableData.data.pagination.pages"
-        :initial-page="Number(tableData.data.pagination.page)"
+        v-model="currentPage"
+        :page-count="Number(tableData.data.pagination.pages)"
         :page-range="3"
         :margin-pages="2"
         :click-handler="clickCallback(this)"
@@ -113,8 +113,15 @@
     },
     methods: {
       clickCallback: (comp) => (pageNum) => {
-        console.log('pageNum', pageNum)
         comp.paginate(pageNum);
+      }
+    },
+    computed: {
+      currentPage: {
+        get: function() {
+          return this.tableData ? Number(this.tableData.data.pagination.page) : 1;
+        },
+        set: function() {}
       }
     },
     props: {
